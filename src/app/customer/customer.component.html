@@ -1,0 +1,12 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">All Customers</h1>
+    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div *ngFor="let cust of customers; let rowIndex=index">
+    <a [routerLink]="['/customers', cust._id]" style="color:black"><span class="badge badge-dark">{{rowIndex + 1}}</span> -> {{cust.firstname}}</a>
+  </div>
+</div>
